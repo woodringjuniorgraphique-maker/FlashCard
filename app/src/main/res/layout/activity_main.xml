@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,12 +8,54 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/flashcard_question"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/gradient_background"
+        android:elevation="20dp"
+        android:gravity="center"
+        android:shadowRadius="60"
+        android:text="Who is the 44th President of the United States?"
+        android:textColor="#04052e"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/flashcard_answer"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@drawable/reponses"
+        android:layout_below="@id/flashcard_question"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Bill Clinton"
+        android:textColor="#001219"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/flashcard_answer2"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/reponses"
+        android:layout_below="@id/flashcard_answer"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Barack Obama"
+        android:textColor="#001219"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/flashcard_answer3"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/flashcard_answer2"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/reponses"
+        android:gravity="center"
+        android:text="Georges H. W. Bush"
+        android:textColor="#001219"
+        android:textSize="40sp"/>
+
+
+</RelativeLayout>
